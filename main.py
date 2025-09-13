@@ -116,7 +116,7 @@ projects = [
         "title": "Construction Business Analysis (BDM)",
         "description": "Comprehensive business intelligence solution for construction industry analysis. Includes data-driven insights, performance metrics, and predictive analytics for better business decision making.",
         "link": "https://github.com/anewsha/Construction-Business-Analysis",
-        "img": "bdm.png"  # your old local image
+        "img": "BDM.png"  # your old local image
     },
     {
         "title": "British Airways Review Analysis",
