@@ -136,11 +136,18 @@ projects = [
 
 
 import base64
+from pathlib import Path
 
 def get_image_base64(file_path):
-    with open(file_path, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+    base_path = Path(__file__).parent
+    full_path = base_path / file_path
+    try:
+        with open(full_path, "rb") as f:
+            data = f.read()
+        return base64.b64encode(data).decode()
+    except FileNotFoundError:
+        st.error(f"Image not found at: {full_path}")
+        return None
 
 # Display projects in aligned cards with local image support
 cols_per_row = 3
